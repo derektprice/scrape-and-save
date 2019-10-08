@@ -4,14 +4,14 @@ from time import sleep
 import datetime
 
 
-html_list = ["https://store.steampowered.com/wishlist/profiles/76561198054858793/#sort=order"]
+html_list = ["INSERT_URLS_HERE"]
 html_list_length = len(html_list)
 num_of_files = list(range(html_list_length))
 num_of_files.reverse()
 html_source_filename_list = []
 
-hdr = {"User-Agent": "Derek Price",
-           "From": "derek.t.price@vanderbilt.edu"}
+hdr = {"User-Agent": "NAME",
+           "From": "EMAIL_ADDRESS"}
 
 def make_filename(website):
     d = datetime.datetime.now()
@@ -28,4 +28,4 @@ def save_html_source(websites, website_name):
             file.write(soup.encode('utf-8-sig'))
             file.close()
 
-save_html_source(html_list, "Dereks wishlist")
+save_html_source(html_list, "HTML_FILENAME")
