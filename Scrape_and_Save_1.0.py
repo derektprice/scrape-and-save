@@ -25,6 +25,7 @@ def make_filename(website):
 def save_html_source(websites, website_name):
     for thing in websites:
         page = requests.get(thing, headers=hdr)
+        page.encoding= 'utf-8'
         soup = BeautifulSoup(page.content, "html.parser")
         sleep(1.0)
         with open(make_filename(website_name), "wb") as file:
