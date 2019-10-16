@@ -31,5 +31,5 @@ def save_html_source(websites, website_name):
             file.write(soup.encode('utf-8-sig'))
             file.close()
                       
-#I'm bad with object-oriented programming so I just run one function to run the whole program - this is probably bad form but it works!
+#this is where the program actually runs, all from just one function. You must add a "stem" to save_html_source - all locally saved html files will start with this "stem," so you can keep your scrapes organized
 save_html_source(html_list, "HTML_FILENAME_STEM")
